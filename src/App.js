@@ -1,6 +1,6 @@
 import './App.css';
 import Header from  './components/Header/header.js';
-
+import Formulario from './components/Formulario/Formulario.js';
 
 console.log(Header);
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div >
       
       <Header></Header>
-      
+      <Formulario/>
     </div>
   );
 }
