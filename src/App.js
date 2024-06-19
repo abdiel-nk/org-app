@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from  './components/Header/header.js';
 
@@ -6,23 +5,10 @@ import Header from  './components/Header/header.js';
 console.log(Header);
 function App() {
   return (
-    <div className="App">
-      {/* {Header()} */}
+    <div >
+      
       <Header></Header>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          First step!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprende React
-        </a>
-      </header>
+      
     </div>
   );
 }
