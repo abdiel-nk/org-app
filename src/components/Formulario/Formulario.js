@@ -11,10 +11,10 @@ const Formulario = () =>{
     return <section className="formulario">
         <form onSubmit={manejarEnvio}> 
             <h2>Rellena el formulario para crear un colaborador</h2>
-            <CampoTexto titulo="Nombre" placeholder="Ingresar nombre"></CampoTexto>
-            <CampoTexto titulo="Puesto" placeholder="Ingresar puesto"></CampoTexto>
-            <CampoTexto titulo="Foto" placeholder="Ingresar enlace de la foto"></CampoTexto>
-            <ListaOpciones titulo="Equipo " placeholder="Selecionar equipo"></ListaOpciones>
+            <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required={true}/>
+            <CampoTexto titulo="Puesto" placeholder="Ingresar puesto"required/>
+            <CampoTexto titulo="Foto" placeholder="Ingresar enlace de la foto"required/>
+            <ListaOpciones titulo="Equipo " placeholder="Selecionar equipo" required={true}></ListaOpciones>
             <Boton>
                 Crear
             </Boton>
