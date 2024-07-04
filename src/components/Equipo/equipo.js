@@ -1,9 +1,21 @@
-const Equipo  = () =>{
+import "./equipo.css"
+const Equipo  = (props) =>{
 
-    return <section className="equipo">
-        <h3 className="
-        
-        colaboratorios"></h3>
+    //desctructuracion
+    const {titulo , colorPrimario, colorSecundario} = props.datos
+
+    const obj={
+        backgroundColor: colorSecundario
+    }
+    const estiloTitulo= {
+        borderColor: colorPrimario
+    }
+
+    return <section className="equipo" style={obj}>
+        <h3 style={estiloTitulo}>{titulo}</h3>
+        <div className="colaboradores">
+
+        </div>
     </section>
 }
 
