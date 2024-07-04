@@ -9,15 +9,17 @@
     line-height: 21.94px;
     display: block;
     margin-bottom: 8px;
+    
 }
 .campo-texto input{
     width: 100%;
     background: #ffffff;
     border: none;
     box-shadow: 10px 10px 30px 0px #0000000F;
-    padding: 30px 5px;
+    padding: 30px 5px ;
     outline-color: #6278F7;
     font-size: 16px;
+    
 
 }
 .campo-texto input::placeholder{

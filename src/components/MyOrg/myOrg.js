@@ -12,7 +12,7 @@ const  MyOrg =(props)=>{
 
     return <section className="section-org">
         <h3 className="title">Mi Organización</h3>
-        <img className="img" src="/img/add.png" alt="add" onClick={props.cambiarMostrar}></img>
+        <img className="img" src="/img/add2.png" alt="add" onClick={props.cambiarMostrar}></img>
     </section>
 }
 export default MyOrg
