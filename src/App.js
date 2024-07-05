@@ -7,11 +7,22 @@ import MyOrg from './components/MyOrg/myOrg.js';
 import Equipo from './components/Equipo/equipo.js';
 console.log(Header);
 function App() {
-
+  //ternario --> mostrar : noMostrar
   const [mostrarFormulario, actualizarMostrar]=useState(false)
 
-  const cambiarMostrar = (props) => {
+  const [colaboradores, actualizarColaboradores]= useState([])
+
+  const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario)}
+
+  //Registrar colaborador
+
+  const registrarColaborador = (colaborador) =>{
+    console.log("nuevo colaborador", colaborador);
+    //Spread operator
+    actualizarColaboradores([...colaboradores, colaborador])
+  }
+
   //listar equipos
   const equipos = [
     {
@@ -57,7 +68,13 @@ function App() {
       
       <Header/>
       {/* {mostrarFormulario ?       <Formulario/> : <></>} */}
-      {mostrarFormulario && <Formulario  equipos={equipos.map((equipo)=> equipo.titulo)}  />}
+      {
+      mostrarFormulario && <Formulario  
+      equipos={equipos.map((equipo)=> equipo.titulo)}
+      registrarColaborador={registrarColaborador}
+
+      />
+      }
       <MyOrg cambiarMostrar={cambiarMostrar} />
 
      {

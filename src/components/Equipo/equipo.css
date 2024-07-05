@@ -13,3 +13,10 @@
     padding-bottom: 8px;
 
 }
+.colaboradores{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* width:  250px;
+    height: 250px; */
+}

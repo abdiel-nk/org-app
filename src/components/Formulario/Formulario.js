@@ -11,6 +11,8 @@ const Formulario = (props) =>{
     useState("")
     const [equipo, actualizarEquipo] = useState("")
 
+    const {registrarColaborador} = props
+
     const manejarEnvio= (event) =>{
         event.preventDefault();
         console.log('manejar envio')
@@ -20,7 +22,8 @@ const Formulario = (props) =>{
             foto,
             equipo
         }
-        console.log(datosEnviar);
+        registrarColaborador(datosEnviar)
+        
     }
 
     return <section className="formulario">
