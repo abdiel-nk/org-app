@@ -5,12 +5,20 @@ import Formulario from './components/Formulario/Formulario.js';
 import MyOrg from './components/MyOrg/myOrg.js';
 
 import Equipo from './components/Equipo/equipo.js';
+import Footer from './components/Footer/Footer.jsx';
 console.log(Header);
 function App() {
   //ternario --> mostrar : noMostrar
   const [mostrarFormulario, actualizarMostrar]=useState(false)
 
-  const [colaboradores, actualizarColaboradores]= useState([])
+  const [colaboradores, actualizarColaboradores ]= useState([
+    {
+      equipo: "Front-End",
+      foto : "https://avatars.githubusercontent.com/u/22450697?s=400&u=5b2b0099b930c8502a52f3183eeeed8f46b0b516&v=4",
+      nombre: "Abdiel",
+      puesto: "Programador",
+    }
+  ])
 
   const cambiarMostrar = () => {
     actualizarMostrar(!mostrarFormulario)}
@@ -79,11 +87,15 @@ function App() {
 
      {
       equipos.map( (equipo) =>{
-        return <Equipo datos={equipo} key= {equipo.titulo}/>
+        return <Equipo datos={equipo} key= {equipo.titulo}
+        colaboradores={colaboradores.filter(colaborador=> colaborador.equipo === equipo.titulo)}/>
       })
      }
+     <Footer></Footer>
     </div>
+     
   );
+ 
 
 }
 export default App;
